@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-AU-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog :: Home</title>
+</head>
+<body>
+    <div class="container">
+        <a th:href="@{/}">Home</a>
+        <div class="post" >
+            <h2 th:text="${post.title}">Title</h2>
+            <h5 th:text="'Created on ' + ${post.createdDate}">Created Date</h5>
+            <p th:text="${post.body}">body text</p>
+        </div>
+    </div>
+</body>
+</html>
