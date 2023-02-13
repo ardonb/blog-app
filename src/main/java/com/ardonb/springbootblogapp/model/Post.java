@@ -42,5 +42,4 @@ public class Post {
                 ", updatedAt='" + updatedAt + "'" +
                 "}";
     }
-
 }

@@ -15,19 +15,24 @@ public class PostService {
     @Autowired
     private PostRepository postRepository;
 
-    public Optional<Post> getById(Long id){
+    public Optional<Post> getById(Long id) {
         return postRepository.findById(id);
     }
 
-    public List<Post> getAll(){
+    public List<Post> getAll() {
         return postRepository.findAll();
     }
 
-    public Post save(Post post){
-        if(post.getId() == null){
+    public Post save(Post post) {
+        if (post.getId() == null) {
             post.setCreatedAt(LocalDateTime.now());
         }
-
+        post.setUpdatedAt(LocalDateTime.now());
         return postRepository.save(post);
     }
+
+    public void delete(Post post) {
+        postRepository.delete(post);
+    }
+
 }

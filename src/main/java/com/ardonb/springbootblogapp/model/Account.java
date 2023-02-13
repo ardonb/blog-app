@@ -48,6 +48,4 @@ public class Account implements Serializable {
                 ", authorities=" + authorities +
                 "}";
     }
-
-
 }
